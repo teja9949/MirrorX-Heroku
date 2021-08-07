@@ -2,6 +2,10 @@ if [[ -n $CONFIG_URL ]]; then
 	wget -q $CONFIG_URL -O /app/config.env
 fi
 
+if [[ -n $AUTHORIZED_CHATS_URL ]]; then
+	wget -q $AUTHORIZED_CHATS_URL -O /app/authorized_chats.txt
+fi
+
 if [[ -n $TOKEN_PICKLE_URL ]]; then
 	wget -q $TOKEN_PICKLE_URL -O /app/token.pickle
 fi
