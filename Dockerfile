@@ -21,7 +21,7 @@ RUN pip3 install --no-cache-dir MirrorX
 
 RUN apt-get purge -yqq gcc && apt-get -y autoremove && rm -rf /var/lib/apt/lists/* && apt-get clean
 
-COPY start.sh /app/start.sh
+COPY . /app
 WORKDIR /app
 
 CMD ["bash","start.sh"]
